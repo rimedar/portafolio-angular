@@ -24,7 +24,7 @@ export class InfoPaginaService {
       this.cargada = true;
       this.info = resp;
       // tslint:disable-next-line: no-string-literal
-      console.log( resp );
+      // console.log( resp );
     });
   }
   private cargarEquipo() {
@@ -38,7 +38,7 @@ export class InfoPaginaService {
     .subscribe ( (resp: any[])  => {
       this.equipo = resp;
       // tslint:disable-next-line: no-string-literal
-      console.log( resp );
+      // console.log( resp );
   });
 }
 }
