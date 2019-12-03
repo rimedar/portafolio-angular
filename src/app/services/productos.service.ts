@@ -9,6 +9,7 @@ export class ProductosService {
 
   cargando = true;
   productos: InfoProductos[] = [];
+  productosFiltrado: InfoProductos[] = [];
   constructor( private http: HttpClient ) {
 
     this.cargarProductos();
@@ -18,7 +19,7 @@ export class ProductosService {
     this.http.get('https://angular-html-8af19.firebaseio.com/productos_idx.json')
     .subscribe( (resp: InfoProductos[]) => {
       // tslint:disable-next-line: no-string-literal
-      console.log( resp );
+      // console.log( resp );
       this.productos = resp;
       this.cargando = false;
 
@@ -29,4 +30,13 @@ getProducto( id: string ) {
 
   return this.http.get(`https://angular-html-8af19.firebaseio.com/productos/${ id }.json`);
 }
+
+buscarProducto( termino: string) {
+
+  this.productosFiltrado = this.productos.filter( producto => {
+    return true;
+  });
+  console.log( this.productosFiltrado );
+}
+
 }
