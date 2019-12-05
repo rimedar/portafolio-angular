@@ -54,7 +54,7 @@ buscarProducto( termino: string) {
 }
 private filtrarProductos( termino: string) {
 
-console.log(this.productos);
+// console.log(this.productos);
 this.productosFiltrado =  [];
 
 termino = termino.toLocaleLowerCase();
